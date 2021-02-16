@@ -8,10 +8,14 @@ public class binary_search {
         while (lo <= hi) {
             int mid = lo + (hi - lo) / 2;
             System.out.println("middle index = " + mid);
-            if (key < a[mid])
+            if (key < a[mid]){
                 hi = mid - 1;
-            else if (key > a[mid])
+                System.out.println(hi);
+            }
+            else if (key > a[mid]){
                 lo = mid + 1;
+                System.out.println(lo);
+            }
             else
                 return mid;
         }
@@ -22,7 +26,7 @@ public class binary_search {
 
         int[] whitelist = new In(args[0]).readAllInts();
         Arrays.sort(whitelist);
-        System.out.print("user entered array readed from file in sorted form");
+        System.out.println("user entered array readed from file in sorted form");
         for (int i = 0; i < whitelist.length; i++) {
             System.out.println(whitelist[i]);
         }
